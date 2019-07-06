@@ -1,27 +1,42 @@
-<ng-progress #progressBar [meteor]="options.meteor" [color]="options.color" [min]="options.min" [speed]="options.speed" [spinner]="options.spinner" [max]="options.max"
-  [spinnerPosition]="options.spinnerPosition" [direction]="options.direction" [thick]="options.thick" [trickleSpeed]="options.trickleSpeed"
-  [ease]="options.ease" (started)="onStarted()" (completed)="onCompleted()">
-</ng-progress>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ng-progress #progressBar [meteor]="options.meteor" [color]="options.color" [min]="options.min"
+        [speed]="options.speed" [spinner]="options.spinner" [max]="options.max"
+        [spinnerPosition]="options.spinnerPosition" [direction]="options.direction" [thick]="options.thick"
+        [trickleSpeed]="options.trickleSpeed" [ease]="options.ease" (started)="onStarted()" (completed)="onCompleted()">
+    </ng-progress>
 
 
-<ul>
-	<li>
-		<a routerLink="/"> Home </a>
-  </li>
-  
-	<li>
-		<a [routerLink]="[ '/about' ]">About</a>
-  </li>
-  
-  <li>
-		<a [routerLink]="[ '/contact' ]">Contact</a>
-	</li>
-	<li>
-		<a [routerLink]="[ '/login' ]">Login</a>
-	</li>
-</ul>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/"> Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="[ '/about' ]"> About </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="[ '/contact' ]"> Contact </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="[ '/login' ]"> Login </a>
+            </li>
+        </ul>
+    </nav>
 
-<router-outlet></router-outlet>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
 
+</body>
 
-<router-outlet></router-outlet>
+</html>

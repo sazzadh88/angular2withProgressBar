@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+
 
 
 @Component({
@@ -7,6 +8,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
 
   options = {
     min: 8,
@@ -21,10 +23,11 @@ export class AppComponent {
     color: 'red',
     thick: true
   };
-  
+
   startedClass = false;
   completedClass = false;
   preventAbuse = false;
+
 
   onStarted() {
     this.startedClass = true;
@@ -40,7 +43,7 @@ export class AppComponent {
     }, 800);
   }
 
-  
+
   title = 'Progress Test';
 
 }
